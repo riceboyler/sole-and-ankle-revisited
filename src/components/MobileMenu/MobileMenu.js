@@ -53,7 +53,7 @@ const StyledContent = styled(DialogContent)`
   position: absolute;
   top: 0;
   right: 0;
-  background: white;
+  background: var(--color-white);
   width: 300px;
   height: 100%;
   display: flex;
@@ -75,11 +75,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: ${WEIGHTS.medium};
-  color: ${COLORS.gray[900]};
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -93,7 +93,7 @@ const Footer = styled.footer`
 const FooterLink = styled.a`
   font-size: 0.875rem;
   text-decoration: none;
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
 `;
 
 export default MobileMenu;
