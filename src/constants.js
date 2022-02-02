@@ -16,3 +16,16 @@ export const WEIGHTS = {
   medium: 600,
   bold: 800,
 };
+
+export const CONSTRAINTS = {
+  laptopMax: '81.25rem',
+  tabletMax: '59.375rem',
+  phoneMax: '37.5rem',
+};
+
+export const QUERIES = {
+  desktop: `(min-width: ${CONSTRAINTS.laptopMax})`,
+  laptopAndDown: `(max-width: ${CONSTRAINTS.laptopMax})`,
+  tabletAndDown: `(max-width: ${CONSTRAINTS.tabletMax})`,
+  phoneAndDown: `(max-width: ${CONSTRAINTS.phoneMax})`,
+};
