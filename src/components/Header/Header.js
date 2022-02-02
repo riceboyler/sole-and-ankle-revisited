@@ -6,6 +6,7 @@ import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 import Icon from '../Icon';
+import UnstyledButton from '../UnstyledButton';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -32,14 +33,20 @@ const Header = () => {
         </Nav>
         <Side />
         <NavMobile>
-          <Icon id="shopping-bag" strokeWidth={1} />
-          <Icon id="search" strokeWidth={1} />
-          <Icon id="menu" strokeWidth={1} onClick={() => { setShowMobileMenu(!showMobileMenu); }} />
-          <MobileMenu
-            isOpen={showMobileMenu}
-            onDismiss={() => setShowMobileMenu(false)}
-          />
+          <UnstyledButton onClick={() => { }}>
+            <Icon id="shopping-bag" strokeWidth={1} />
+          </UnstyledButton>
+          <UnstyledButton onClick={() => { }}>
+            <Icon id="search" strokeWidth={1} />
+          </UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
+            <Icon id="menu" strokeWidth={1} />
+          </UnstyledButton>
         </NavMobile>
+        <MobileMenu
+          isOpen={showMobileMenu}
+          onDismiss={() => setShowMobileMenu(false)}
+        />
       </MainHeader>
     </header>
   );
