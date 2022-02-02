@@ -18,9 +18,9 @@ export const WEIGHTS = {
 };
 
 export const CONSTRAINTS = {
-  laptopMax: '81.25rem',
-  tabletMax: '59.375rem',
-  phoneMax: '37.5rem',
+  laptopMax: '81.25rem', //1300px
+  tabletMax: '59.375rem', //950px
+  phoneMax: '37.5rem', //600px
 };
 
 export const QUERIES = {

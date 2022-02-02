@@ -23,14 +23,14 @@ const Header = () => {
         <Side>
           <Logo />
         </Side>
-        <Nav>
+        <DesktopNav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
-        </Nav>
+        </DesktopNav>
         <Side />
         <NavMobile>
           <UnstyledButton onClick={() => { }}>
@@ -68,10 +68,12 @@ const MainHeader = styled.div`
   }
 `;
 
-const Nav = styled.nav`
+const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
-  margin: 0px 48px;
+  gap: clamp(3rem, 14vw - 6.75rem, 15rem);
+  margin: 0;
+  margin-left: 48px;
+  overflow-y: auto;
 
   @media ${QUERIES.tabletAndDown} {
     display: none;
